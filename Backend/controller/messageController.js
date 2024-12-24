@@ -31,3 +31,17 @@ export const sendMessage = catchAsyncError(
         });
     }
 )
+
+
+
+
+export const allMessage = catchAsyncError(
+    async(req, res, next) => {
+        const messages = await Message.find();
+
+        res.status(200).json({
+            success:true,
+            messages,
+        })
+    }
+)
