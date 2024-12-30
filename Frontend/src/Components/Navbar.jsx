@@ -13,7 +13,7 @@ export default function Navbar() {
 
     const handleLogout = async () => {
         await axios
-            .get("http://localhost:3000/api/v1/user/patient/logout", {
+            .get("https://localhost:3000/api/v1/user/patient/logout", {
                 withCredentials: true,
             })
             .then((res) => {
